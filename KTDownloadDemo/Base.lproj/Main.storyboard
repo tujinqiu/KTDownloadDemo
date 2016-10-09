@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EIX-2l-Qcs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Kevin的下载器-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,141 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZt-I5-iAp">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rBG-a4-yr5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAa-bB-kAT">
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oro-7e-tBz">
+                                <state key="normal" image="start"/>
+                                <connections>
+                                    <action selector="tapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tds-Mw-I1x"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rBG-a4-yr5" firstAttribute="trailing" secondItem="fZt-I5-iAp" secondAttribute="trailing" id="8AO-z6-zen"/>
+                            <constraint firstItem="iAa-bB-kAT" firstAttribute="top" secondItem="rBG-a4-yr5" secondAttribute="bottom" constant="10" id="MhF-IQ-Tev"/>
+                            <constraint firstItem="rBG-a4-yr5" firstAttribute="top" secondItem="fZt-I5-iAp" secondAttribute="bottom" constant="40" id="TsD-Us-nL9"/>
+                            <constraint firstItem="iAa-bB-kAT" firstAttribute="centerX" secondItem="rBG-a4-yr5" secondAttribute="centerX" id="Xcy-cr-gJH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fZt-I5-iAp" secondAttribute="trailing" constant="5" id="YAq-Nd-0Ou"/>
+                            <constraint firstItem="fZt-I5-iAp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="b9l-uR-Wcj"/>
+                            <constraint firstItem="oro-7e-tBz" firstAttribute="top" secondItem="iAa-bB-kAT" secondAttribute="bottom" constant="26" id="hQA-C5-oYK"/>
+                            <constraint firstItem="fZt-I5-iAp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="p4z-mp-Ndi"/>
+                            <constraint firstItem="rBG-a4-yr5" firstAttribute="leading" secondItem="fZt-I5-iAp" secondAttribute="leading" id="po4-ki-2PP"/>
+                            <constraint firstItem="oro-7e-tBz" firstAttribute="centerX" secondItem="iAa-bB-kAT" secondAttribute="centerX" id="wda-ed-Ypk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Kevin的下载器" id="YWP-bj-2ho">
+                        <barButtonItem key="leftBarButtonItem" title="手动输入" id="lwB-f5-Fsr">
+                            <connections>
+                                <segue destination="rEn-q7-bKw" kind="presentation" identifier="input" id="ehD-gK-gvN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="二维码" id="onB-AS-p9n">
+                            <connections>
+                                <action selector="tapQRButton:" destination="BYZ-38-t0r" id="Peh-oQ-fjG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressLabel" destination="iAa-bB-kAT" id="JlL-dq-alB"/>
+                        <outlet property="progressView" destination="rBG-a4-yr5" id="q87-Xx-sOG"/>
+                        <outlet property="startButton" destination="oro-7e-tBz" id="f4W-26-5RN"/>
+                        <outlet property="urlLabel" destination="fZt-I5-iAp" id="zNq-BE-HcY"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="746" y="161"/>
+        </scene>
+        <!--请输入下载网址-->
+        <scene sceneID="rpT-s6-pT0">
+            <objects>
+                <viewController id="U0c-UM-8w9" customClass="InputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U1X-Ms-Xix"/>
+                        <viewControllerLayoutGuide type="bottom" id="haE-DW-2eU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4a-5Y-ouP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQQ-MI-XB9">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HQQ-MI-XB9" firstAttribute="leading" secondItem="D4a-5Y-ouP" secondAttribute="leading" constant="15" id="CYn-RC-jCq"/>
+                            <constraint firstItem="HQQ-MI-XB9" firstAttribute="top" secondItem="U1X-Ms-Xix" secondAttribute="bottom" constant="30" id="j4V-hX-gn7"/>
+                            <constraint firstAttribute="trailing" secondItem="HQQ-MI-XB9" secondAttribute="trailing" constant="15" id="l5i-wm-an9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="请输入下载网址" id="JTO-y5-JgN">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="Lnv-0C-gMK">
+                            <connections>
+                                <action selector="tapCancelButton:" destination="U0c-UM-8w9" id="UZY-gZ-kgT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="8Zr-8k-35Z">
+                            <connections>
+                                <action selector="tapDoneButton:" destination="U0c-UM-8w9" id="rSP-1p-xOA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="HQQ-MI-XB9" id="2vk-SM-4oW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myx-rZ-q2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mea-5s-Piv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Se-DT-UBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="rEn-q7-bKw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Hb-ah-dHv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U0c-UM-8w9" kind="relationship" relationship="rootViewController" id="ahP-md-dxz"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1503" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8BX-MK-ptb">
+            <objects>
+                <navigationController id="EIX-2l-Qcs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="khW-Fj-FW1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Opd-tV-tjh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0GF-87-kxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="161"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start" width="43" height="43"/>
+    </resources>
 </document>
