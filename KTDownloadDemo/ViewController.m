@@ -9,9 +9,9 @@
 #import "ViewController.h"
 #import "InputViewController.h"
 #import "AFNetworking.h"
-#import "KTQRCodeNavigationController.h"
+#import "KTQRCodeController.h"
 
-@interface ViewController ()<KTQRCodeNavigationControllerDelegate>
+@interface ViewController ()<KTQRCodeControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
@@ -27,23 +27,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.urlLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"KTDownloadURL"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleExit:) name:UIApplicationWillTerminateNotification object:nil];
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillTerminateNotification object:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)handleExit:(NSNotification *)notif
+{
+    if (self.urlLabel.text.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:self.urlLabel.text forKey:@"KTDownloadURL"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
 - (IBAction)tapQRButton:(id)sender {
-    KTQRCodeNavigationController *nav = [KTQRCodeNavigationController QRCodeNavigationController];
+    KTQRCodeController *nav = [KTQRCodeController QRCodeController];
     nav.QRCodeDelegate = self;
     [self presentViewController:nav animated:YES completion:nil];
 }
 
-- (void)QRCodeNavigationController:(KTQRCodeNavigationController *)navigationController didScanResult:(NSString *)result
+- (void)QRCodeController:(KTQRCodeController *)QRCodeController didScanResult:(NSString *)result
 {
-    [navigationController dismissViewControllerAnimated:YES completion:nil];
+    [QRCodeController dismissViewControllerAnimated:YES completion:nil];
     self.urlLabel.text = result;
 }
 
@@ -54,8 +69,10 @@
         NSURL *URL = [NSURL URLWithString:self.urlLabel.text];
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         self.downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-            self.progressView.progress = downloadProgress.fractionCompleted;
-            self.progressLabel.text = [NSString stringWithFormat:@"%d", (int)(downloadProgress.fractionCompleted * 100)];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.progressView.progress = downloadProgress.fractionCompleted;
+                self.progressLabel.text = [NSString stringWithFormat:@"%d%%", (int)(downloadProgress.fractionCompleted * 100)];
+            });
         } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
             NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
             return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
@@ -63,11 +80,11 @@
             if (error) {
                 [self showError:error];
             } else {
-                self.isStartState = YES;
                 NSString *name = response.suggestedFilename;
                 NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
                 NSString *destPath = [docPath stringByAppendingPathComponent:name];
                 [[NSFileManager defaultManager] moveItemAtURL:filePath toURL:[NSURL fileURLWithPath:destPath] error:nil];
+                [self showSuccess:name];
             }
         }];
         [self.downloadTask resume];
@@ -75,6 +92,15 @@
         [self.downloadTask cancel];
     }
     self.isStartState = !self.isStartState;
+}
+
+- (void)showSuccess:(NSString *)fileName
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"下载完成" message:fileName preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    self.isStartState = YES;
 }
 
 - (void)showError:(NSError *)error

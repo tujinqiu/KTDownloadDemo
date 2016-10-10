@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5EFC981DABC15B00F4D2E6 /* KTPreviewLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EFC8D1DABC15B00F4D2E6 /* KTPreviewLayerView.m */; };
+		0A5EFC991DABC15B00F4D2E6 /* KTQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EFC8E1DABC15B00F4D2E6 /* KTQRCode.bundle */; };
+		0A5EFC9A1DABC15B00F4D2E6 /* KTQRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EFC8F1DABC15B00F4D2E6 /* KTQRCode.storyboard */; };
+		0A5EFC9B1DABC15B00F4D2E6 /* KTQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EFC911DABC15B00F4D2E6 /* KTQRCodeController.m */; };
+		0A5EFC9C1DABC15B00F4D2E6 /* KTQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EFC931DABC15B00F4D2E6 /* KTQRCodeViewController.m */; };
+		0A5EFC9D1DABC15B00F4D2E6 /* KTScanPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EFC951DABC15B00F4D2E6 /* KTScanPopView.m */; };
+		0A5EFC9E1DABC15B00F4D2E6 /* UIAlertController+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EFC971DABC15B00F4D2E6 /* UIAlertController+Simple.m */; };
 		0AB24E3C1DAA854E009E958F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E3B1DAA854E009E958F /* main.m */; };
 		0AB24E3F1DAA854E009E958F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E3E1DAA854E009E958F /* AppDelegate.m */; };
 		0AB24E421DAA854E009E958F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E411DAA854E009E958F /* ViewController.m */; };
@@ -22,9 +29,6 @@
 		0AB24E821DAA91D1009E958F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E7A1DAA91D1009E958F /* AFURLRequestSerialization.m */; };
 		0AB24E831DAA91D1009E958F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E7C1DAA91D1009E958F /* AFURLResponseSerialization.m */; };
 		0AB24E841DAA91D1009E958F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E7E1DAA91D1009E958F /* AFURLSessionManager.m */; };
-		0AB24E871DAA9747009E958F /* KTQRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB24E861DAA9747009E958F /* KTQRCode.storyboard */; };
-		0AB24E8A1DAA9831009E958F /* KTQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E891DAA9831009E958F /* KTQRCodeViewController.m */; };
-		0AB24E8D1DAA9A2F009E958F /* KTQRCodeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB24E8C1DAA9A2F009E958F /* KTQRCodeNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5EFC8C1DABC15B00F4D2E6 /* KTPreviewLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPreviewLayerView.h; sourceTree = "<group>"; };
+		0A5EFC8D1DABC15B00F4D2E6 /* KTPreviewLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPreviewLayerView.m; sourceTree = "<group>"; };
+		0A5EFC8E1DABC15B00F4D2E6 /* KTQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KTQRCode.bundle; sourceTree = "<group>"; };
+		0A5EFC8F1DABC15B00F4D2E6 /* KTQRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KTQRCode.storyboard; sourceTree = "<group>"; };
+		0A5EFC901DABC15B00F4D2E6 /* KTQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTQRCodeController.h; sourceTree = "<group>"; };
+		0A5EFC911DABC15B00F4D2E6 /* KTQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTQRCodeController.m; sourceTree = "<group>"; };
+		0A5EFC921DABC15B00F4D2E6 /* KTQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTQRCodeViewController.h; sourceTree = "<group>"; };
+		0A5EFC931DABC15B00F4D2E6 /* KTQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTQRCodeViewController.m; sourceTree = "<group>"; };
+		0A5EFC941DABC15B00F4D2E6 /* KTScanPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTScanPopView.h; sourceTree = "<group>"; };
+		0A5EFC951DABC15B00F4D2E6 /* KTScanPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTScanPopView.m; sourceTree = "<group>"; };
+		0A5EFC961DABC15B00F4D2E6 /* UIAlertController+Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Simple.h"; sourceTree = "<group>"; };
+		0A5EFC971DABC15B00F4D2E6 /* UIAlertController+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Simple.m"; sourceTree = "<group>"; };
 		0AB24E371DAA854E009E958F /* KTDownloadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTDownloadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB24E3B1DAA854E009E958F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AB24E3D1DAA854E009E958F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,11 +92,6 @@
 		0AB24E7C1DAA91D1009E958F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		0AB24E7D1DAA91D1009E958F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		0AB24E7E1DAA91D1009E958F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		0AB24E861DAA9747009E958F /* KTQRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KTQRCode.storyboard; sourceTree = "<group>"; };
-		0AB24E881DAA9831009E958F /* KTQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTQRCodeViewController.h; sourceTree = "<group>"; };
-		0AB24E891DAA9831009E958F /* KTQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTQRCodeViewController.m; sourceTree = "<group>"; };
-		0AB24E8B1DAA9A2F009E958F /* KTQRCodeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTQRCodeNavigationController.h; sourceTree = "<group>"; };
-		0AB24E8C1DAA9A2F009E958F /* KTQRCodeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTQRCodeNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +119,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5EFC8B1DABC15B00F4D2E6 /* KTQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				0A5EFC8E1DABC15B00F4D2E6 /* KTQRCode.bundle */,
+				0A5EFC8C1DABC15B00F4D2E6 /* KTPreviewLayerView.h */,
+				0A5EFC8D1DABC15B00F4D2E6 /* KTPreviewLayerView.m */,
+				0A5EFC8F1DABC15B00F4D2E6 /* KTQRCode.storyboard */,
+				0A5EFC901DABC15B00F4D2E6 /* KTQRCodeController.h */,
+				0A5EFC911DABC15B00F4D2E6 /* KTQRCodeController.m */,
+				0A5EFC921DABC15B00F4D2E6 /* KTQRCodeViewController.h */,
+				0A5EFC931DABC15B00F4D2E6 /* KTQRCodeViewController.m */,
+				0A5EFC941DABC15B00F4D2E6 /* KTScanPopView.h */,
+				0A5EFC951DABC15B00F4D2E6 /* KTScanPopView.m */,
+				0A5EFC961DABC15B00F4D2E6 /* UIAlertController+Simple.h */,
+				0A5EFC971DABC15B00F4D2E6 /* UIAlertController+Simple.m */,
+			);
+			path = KTQRCode;
+			sourceTree = "<group>";
+		};
 		0AB24E2E1DAA854E009E958F = {
 			isa = PBXGroup;
 			children = (
-				0AB24E851DAA9725009E958F /* KTQRCode */,
+				0A5EFC8B1DABC15B00F4D2E6 /* KTQRCode */,
 				0AB24E711DAA91D1009E958F /* AFNetworking */,
 				0AB24E391DAA854E009E958F /* KTDownloadDemo */,
 				0AB24E531DAA854E009E958F /* KTDownloadDemoTests */,
@@ -192,18 +222,6 @@
 				0AB24E7E1DAA91D1009E958F /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		0AB24E851DAA9725009E958F /* KTQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				0AB24E861DAA9747009E958F /* KTQRCode.storyboard */,
-				0AB24E8B1DAA9A2F009E958F /* KTQRCodeNavigationController.h */,
-				0AB24E8C1DAA9A2F009E958F /* KTQRCodeNavigationController.m */,
-				0AB24E881DAA9831009E958F /* KTQRCodeViewController.h */,
-				0AB24E891DAA9831009E958F /* KTQRCodeViewController.m */,
-			);
-			path = KTQRCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,10 +333,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5EFC9A1DABC15B00F4D2E6 /* KTQRCode.storyboard in Resources */,
+				0A5EFC991DABC15B00F4D2E6 /* KTQRCode.bundle in Resources */,
 				0AB24E4A1DAA854E009E958F /* LaunchScreen.storyboard in Resources */,
 				0AB24E471DAA854E009E958F /* Assets.xcassets in Resources */,
 				0AB24E451DAA854E009E958F /* Main.storyboard in Resources */,
-				0AB24E871DAA9747009E958F /* KTQRCode.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,17 +362,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5EFC9C1DABC15B00F4D2E6 /* KTQRCodeViewController.m in Sources */,
 				0AB24E811DAA91D1009E958F /* AFSecurityPolicy.m in Sources */,
 				0AB24E831DAA91D1009E958F /* AFURLResponseSerialization.m in Sources */,
 				0AB24E421DAA854E009E958F /* ViewController.m in Sources */,
+				0A5EFC9D1DABC15B00F4D2E6 /* KTScanPopView.m in Sources */,
 				0AB24E3F1DAA854E009E958F /* AppDelegate.m in Sources */,
-				0AB24E8A1DAA9831009E958F /* KTQRCodeViewController.m in Sources */,
 				0AB24E7F1DAA91D1009E958F /* AFHTTPSessionManager.m in Sources */,
 				0AB24E841DAA91D1009E958F /* AFURLSessionManager.m in Sources */,
 				0AB24E3C1DAA854E009E958F /* main.m in Sources */,
+				0A5EFC981DABC15B00F4D2E6 /* KTPreviewLayerView.m in Sources */,
+				0A5EFC9B1DABC15B00F4D2E6 /* KTQRCodeController.m in Sources */,
+				0A5EFC9E1DABC15B00F4D2E6 /* UIAlertController+Simple.m in Sources */,
 				0AB24E801DAA91D1009E958F /* AFNetworkReachabilityManager.m in Sources */,
 				0AB24E701DAA8AA2009E958F /* InputViewController.m in Sources */,
-				0AB24E8D1DAA9A2F009E958F /* KTQRCodeNavigationController.m in Sources */,
 				0AB24E821DAA91D1009E958F /* AFURLRequestSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +614,7 @@
 				0AB24E661DAA854E009E958F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB24E671DAA854E009E958F /* Build configuration list for PBXNativeTarget "KTDownloadDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +623,7 @@
 				0AB24E691DAA854E009E958F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB24E6A1DAA854E009E958F /* Build configuration list for PBXNativeTarget "KTDownloadDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +632,7 @@
 				0AB24E6C1DAA854E009E958F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

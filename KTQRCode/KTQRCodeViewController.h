@@ -1,15 +1,13 @@
 //
 //  KTQRCodeViewController.h
-//  KTDownloadDemo
+//  KTQRCode
 //
-//  Created by Kevin on 2016/10/9.
-//  Copyright © 2016年 Kevin. All rights reserved.
+//  Created by whkevin on 2016/10/10.
+//  Copyright © 2016年 ovwhkevin0461. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface KTQRCodeViewController : UIViewController
-
-@property (nonatomic, copy) void(^callbackBlock)(NSString *result);
 
 @end
